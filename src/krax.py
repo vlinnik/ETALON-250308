@@ -6,7 +6,7 @@ from concrete import Factory,Weight,Container,Dosator,FlowMeter,Lock,Transport,M
 from concrete.dosator import DescendingDosator
 from concrete.vibrator import Vibrator,UnloadHelper
 from concrete.container import Retarder
-from pyplc.utils.misc import BLINK
+from pyplc.utils.misc import BLINK,TOF
 
 print(f'\tЗапуск проекта {project_name} {project_version}')
 
@@ -23,9 +23,10 @@ addition_1 = Container(m=lambda: additions_m_1.m,out=plc.APUMP_ON_1,closed=~plc.
 dadditions_1 = DescendingDosator(m = lambda: additions_m_1.m, out = plc.DADDITIONS_OPEN_1,closed=plc.DADDITIONS_CLOSED_1, containers=(addition_1,),lock=Lock(key=lambda: not plc.MIXER_ISON_1 or plc.APUMP_ON_1 ) )
 
 water_m_1 = Weight(raw = plc.WATER_M_1, mmax = 500)
-water_1 = Container( m = lambda: water_m_1.m, out = plc.WPUMP_ON_1, lock = Lock(key=~plc.DWATER_CLOSED_1) )
+water_1 = Container( m = lambda: water_m_1.m, out = plc.WATER_OPEN_1, lock = Lock(key=~plc.DWATER_CLOSED_1) )
 addition_2 = FlowMeter(out=plc.APUMP_ON_2,cnt=plc.ADDITION_Q_2,impulseWeight=0.0035,closed=True)
 dwater_1 = Dosator( m = lambda: water_m_1.m, closed = plc.DWATER_CLOSED_1, out = plc.DWATER_OPEN_1, lock = Lock(key=lambda: plc.WPUMP_ON_1 or not plc.MIXER_ISON_1 ),containers=(water_1,addition_2) )
+wpump_1 = TOF(clk=plc.WATER_OPEN_1,q=plc.WPUMP_ON_1,pt=3000)
 
 tconveyor_1= Transport(power = plc.TCONVEYOR_ON_1, ison = plc.TCONVEYOR_ISON_1,out=plc.CONVEYOR_ON_1)
 fillers_m_1 = Weight(raw=plc.FILLERS_M_1, mmax = 8000)
@@ -53,7 +54,7 @@ factory_1.on_emergency = tuple(x.emergency for x in (silage_1,water_1,filler_1,f
 
 instances = (factory_1, cement_m_1, water_m_1, additions_m_1, fillers_m_1, silage_1, dcement_1, aerator_1, water_1,addition_2, dwater_1, addition_1,
              dadditions_1, dfillers_1, filler_1, filler_2, filler_3, vibrator_1, vibrator_2, vibrator_3, tconveyor_1, gate_1, mixer_1, motor_1,
-             ready_1,loaded_1,manager_1,retarder_1,dc_vibrator_1)
+             ready_1,loaded_1,manager_1,retarder_1,dc_vibrator_1,wpump_1)
 
 if platform=='linux':
   from concrete.imitation import iMOTOR,iGATE,iVALVE,iWEIGHT,iROTARYFLOW
