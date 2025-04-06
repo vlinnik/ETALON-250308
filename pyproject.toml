@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel","setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+write_to = "gui/_version.py"
+
+[project]
+name = "etalon-250308"
+dynamic=["version"]
+description = "Визуализация PYSCA-HMI"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT License"}
+authors = [
+    {name = "Vasiliy Linnik", email = "vlinnik@mail.ru"}
+]
+urls = { "Homepage" = "https://github.com/vlinnik/<project>.git" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies=["PythonQwt","AnyQt","sqlalchemy"]
+
+[project.optional-dependencies]
+dev = []
+
+[project.gui-scripts]
+pysca-hmi = "gui.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["src"]
+include = ["gui"]
+
+[tool.setuptools.data-files]
+"share/applications" = ["pysca-hmi.desktop"]
+"share/pysca-hmi" = [ "default.scada", "*.rcc","*.dat"]
+"share/pysca-hmi/ui" = ["ui/*.ui"]
+#"lib/SCADA/modules" = ["/usr/lib/x86_64-linux-gnu/qt5/plugins/SCADA/modules/libconcrete6.so"]

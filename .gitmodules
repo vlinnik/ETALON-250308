@@ -1,0 +1,6 @@
+[submodule "resources"]
+	path = resources
+	url = https://github.com/vlinnik/concretetheme.git
+[submodule "src/concrete"]
+	path = src/concrete
+	url = https://github.com/vlinnik/concrete.git

@@ -1,0 +1,12 @@
+{
+  "paths": {
+    "root": "src"
+  },
+  "tools": {
+    "downloader": "",
+    "miniterm": "",
+    "telnet": "",
+    "enumSerials": ""
+  },
+  "project": "PYPLC-250308"
+}

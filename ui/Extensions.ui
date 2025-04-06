@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Extensions</class>
+ <widget class="QWidget" name="Extensions">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>872</width>
+    <height>74</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Дополнения</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QCheckBox" name="vibrator_1">
+     <property name="text">
+      <string>ВИБРАТОР-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QCheckBox" name="vibrator_3">
+     <property name="text">
+      <string>ВИБРАТОР-3</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" rowspan="2">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>ЗАТВОР СМ</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="hint_1">
+        <property name="text">
+         <string>Открываний</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBox">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="specialValueText">
+         <string>ОТКЛ</string>
+        </property>
+        <property name="suffix">
+         <string> раз</string>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="hint_2">
+        <property name="text">
+         <string>Длительность</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinBox_2">
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="specialValueText">
+         <string>ОТКЛ</string>
+        </property>
+        <property name="suffix">
+         <string> мсек</string>
+        </property>
+        <property name="maximum">
+         <number>10000</number>
+        </property>
+        <property name="singleStep">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="vibrator_2">
+     <property name="text">
+      <string>ВИБРАТОР-2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Мин. остаток ХД-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Макс. остаток ХД-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QSpinBox" name="low_dadditions_1">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="suffix">
+      <string> кг</string>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QSpinBox" name="full_dadditions_1">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="suffix">
+      <string> кг</string>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

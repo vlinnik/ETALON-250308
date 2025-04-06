@@ -1,0 +1,38 @@
+{
+    "slots": [
+        8,
+        8,
+        1,
+        2,
+        1,
+        1,
+        1
+    ],
+    "node_id": 1,
+    "init": {
+        "hostname": "krax",
+        "flags": 0,
+        "iface": 0,
+        "channel": 1,
+        "rate": 12
+    },
+    "layout": [
+        "94:b5:55:25:97:1c",
+        "94:b5:55:2c:d2:94",
+        "b4:8a:0a:8f:11:7c",
+        "94:b5:55:2b:c9:68",
+        "08:d1:f9:27:f1:80",
+        "08:d1:f9:27:ff:a4",
+        "08:d1:f9:27:f3:ec"
+    ],
+    "devs": [
+        "KRAX AI-455",
+        "KRAX AI-455",
+        "KRAX DI-430",
+        "KRAX DI-430",
+        "KRAX DO-530",
+        "KRAX DO-530",
+        "KRAX DO-530"
+    ],
+    "via": "0.0.0.0"
+}
