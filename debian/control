@@ -9,7 +9,7 @@ Build-Depends:
  python3-setuptools,
  python3-all,
 Standards-Version: 4.6.2
-Homepage: https://github.com/vlinnik/etalon_230508.git
+Homepage: https://github.com/vlinnik/ETALON-250308.git
 
 Package: python3-etalon-250308
 Architecture: all

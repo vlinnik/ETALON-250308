@@ -16,7 +16,7 @@ license = {text = "MIT License"}
 authors = [
     {name = "Vasiliy Linnik", email = "vlinnik@mail.ru"}
 ]
-urls = { "Homepage" = "https://github.com/vlinnik/<project>.git" }
+urls = { "Homepage" = "https://github.com/vlinnik/ETALON-250308.git" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
