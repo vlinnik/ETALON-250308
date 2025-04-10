@@ -69,7 +69,7 @@ if platform=='linux':
   
   idwater_1 = iVALVE(open = plc.DWATER_OPEN_1,closed = plc.DWATER_CLOSED_1)
   iwpump_1 = iMOTOR(simple=True, on = plc.WPUMP_ON_1,ison = plc.WPUMP_ISON_1)
-  iwater_m_1 = iWEIGHT( loading=plc.WPUMP_ON_1,unloading=plc.DWATER_OPEN_1, q = plc.WATER_M_1 )
+  iwater_m_1 = iWEIGHT( loading=plc.WATER_OPEN_1,unloading=plc.DWATER_OPEN_1, q = plc.WATER_M_1 )
 
   idadditions_1 = iVALVE(open = plc.DADDITIONS_OPEN_1,closed = plc.DADDITIONS_CLOSED_1)
   iapump_1 = iMOTOR(simple=True,on=plc.APUMP_ON_1,ison=plc.APUMP_ISON_1 )

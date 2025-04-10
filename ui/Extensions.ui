@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>872</width>
+    <width>971</width>
     <height>74</height>
    </rect>
   </property>
@@ -20,6 +20,53 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="vibrator_2">
+     <property name="text">
+      <string>ВИБРАТОР-2</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Макс. остаток ХД-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QSpinBox" name="low_dadditions_1">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="suffix">
+      <string> кг</string>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Мин. остаток ХД-1</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QSpinBox" name="full_dadditions_1">
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="suffix">
+      <string> кг</string>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QCheckBox" name="vibrator_1">
      <property name="text">
@@ -34,7 +81,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="4" rowspan="2">
+   <item row="0" column="5" rowspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>ЗАТВОР СМ</string>
@@ -92,50 +139,26 @@
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QCheckBox" name="vibrator_2">
+   <item row="0" column="4">
+    <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>ВИБРАТОР-2</string>
+      <string>Имп/КГ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignBottom|Qt::AlignHCenter</set>
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Мин. остаток ХД-1</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Макс. остаток ХД-1</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="3">
-    <widget class="QSpinBox" name="low_dadditions_1">
+   <item row="1" column="4">
+    <widget class="QSpinBox" name="impulseWeight">
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
      <property name="suffix">
-      <string> кг</string>
+      <string> имп</string>
      </property>
      <property name="maximum">
-      <number>30</number>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QSpinBox" name="full_dadditions_1">
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="suffix">
-      <string> кг</string>
-     </property>
-     <property name="maximum">
-      <number>30</number>
+      <number>1000</number>
      </property>
     </widget>
    </item>
